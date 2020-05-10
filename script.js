@@ -6,7 +6,7 @@ var directionsEl = document.querySelector(".directions");
 var questionEl = document.querySelector(".question");
 var multipleChoiceEl = document.querySelector(".multipleChoice");
 var viewHighScoresEl = document.querySelector(".viewHighScores");
-
+ 
 // original style elements
 timeEl.textContent = "60 seconds left";
 viewHighScoresEl.textContent="View High Scores";
