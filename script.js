@@ -170,6 +170,7 @@ function renderHighscores() {
   highscoreList.innerHTML = "";
 
   for (var i = 0; i < highscores.length; i++) {
+      
     var highscore = highscores[i];
 
     var li = document.createElement("li");
