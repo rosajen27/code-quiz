@@ -1,32 +1,32 @@
 #top {
-    margin: 50px;
-    padding-bottom: 25px;
+  margin: 50px;
+  padding-bottom: 25px;
 }
 
 .time {
-    color: red;
-    font-weight: bold;
-    font-size: 18px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .header,
 #quiz,
 #finalScoreContainer {
-    text-align: center;
-    margin: 50px;
+  text-align: center;
+  margin: 50px;
 }
 
 .header h1,
 .header h2 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .header h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #question {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 #startButton,
@@ -41,38 +41,35 @@
 }
 
 #correctCheck {
-    color: green;
-    font-weight: bold;
+  color: green;
+  font-weight: bold;
 }
 
 #incorrectCheck {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
 
 ul,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 li {
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 5px;
-    background-color:	rgb(192,192,192);
-    color: white;
-    font-size: 1.5em;
-    line-height: 1.5;
-  
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: rgb(192, 192, 192);
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
 }
 
-
 li button {
-    float: right;
-    border: none;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
+  float: right;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1em;
+}
