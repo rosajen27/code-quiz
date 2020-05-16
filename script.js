@@ -174,7 +174,7 @@ function renderHighscores() {
     var highscore = highscores[i];
 
     var li = document.createElement("li");
-    li.textContent = highscore;
+    li.textContent = highscore + " : " + quiz.score;
     li.setAttribute("data-index", i);
 
     var button = document.createElement("button");
