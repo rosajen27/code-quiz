@@ -20,6 +20,8 @@ WHEN the game is over
 THEN I can save my initials and score
 ```
 
-The following animation demonstrates the application functionality:
 
 ![code quiz](https://github.com/rosajen27/codequiz/blob/master/Assets/Capture.JPG)
+
+## To Do
+- LocalStorage for Final Scores needs to be fixed
