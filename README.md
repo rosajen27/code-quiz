@@ -6,7 +6,7 @@ A timed code quiz with multiple-choice questions. This app will run in the brows
 
 Deployed Website: https://rosajen27.github.io/codequiz/
 
-![code quiz](https://github.com/rosajen27/codequiz/blob/master/Assets/Capture.JPG)
+![code quiz](https://github.com/rosajen27/codequiz/blob/master/Assets/Capture.png)
 
 ## Built With
 
