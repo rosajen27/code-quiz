@@ -187,7 +187,7 @@ function finalScoreContainer() {
   }
 
 }
-
+ 
 // High Score Div
 var highscoreInput = document.querySelector("#highscore-text");
 var highscoreForm = document.querySelector("#highscore-form");
