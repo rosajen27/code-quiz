@@ -27,8 +27,6 @@ Demo: https://rosajen27.github.io/codequiz/
 
 ## License
 
-![License](https://img.shields.io/badge/license*MIT%20License*blue.svg)
-
 This project is licensed under the MIT License.
 
 Copyright (c) 2021 Jennifer Rosa
