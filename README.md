@@ -7,7 +7,9 @@ A timed coding quiz with multiple-choice questions. The quiz will inform the use
 
 Demo: https://rosajen27.github.io/codequiz/
 
-![code quiz](https://github.com/rosajen27/codequiz/blob/master/Assets/Capture.png)
+![code quiz](https://github.com/rosajen27/codequiz/blob/master/assets/one.PNG)
+![code quiz](https://github.com/rosajen27/codequiz/blob/master/assets/two.PNG)
+![code quiz](https://github.com/rosajen27/codequiz/blob/master/assets/three.PNG)
 
 
 ## Built With
