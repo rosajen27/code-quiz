@@ -1,24 +1,30 @@
 // Elements
+
+// Header - Timer
 var timerEl = document.querySelector("#timer");
 timerEl.textContent = "60";
 
-var headerEl = document.querySelector(".header");
-
+// Landing Page - Title
 var titleEl = document.querySelector(".title");
-titleEl.textContent = "Code Quiz Challenge";
-
+titleEl.textContent = "Coding Quiz Challenge";
+// Landing Page - Directions
 var directionsEl = document.querySelector(".directions");
 directionsEl.textContent =
   "Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 10 seconds.";
-
+// Landing Page - Start Button
 var startButtonEl = document.querySelector("#startButton");
 
-var quizEl = document.querySelector("#quiz");
-quizEl.setAttribute("style", "visibility:hidden");
+// Main Section
+var mainEl = document.querySelector(".main");
 
+var quizDivEl = document.querySelector("#quizDiv");
+quizDivEl.setAttribute("style", "visibility:hidden");
+
+// Correct vs Incorrect Display
 var correctCheckEl = document.querySelector("#correctCheck");
 var incorrectCheckEl = document.querySelector("#incorrectCheck");
 
+// Final Scores
 var finalScoreContainerEl = document.querySelector("#finalScoreContainer");
 finalScoreContainerEl.setAttribute("style", "visibility:hidden");
 
@@ -30,18 +36,26 @@ function startTime() {
 
   populate();
 
+  // Display Quiz Question
+  quizDivEl.setAttribute("style", "visibility:visible");
+
+  // Hide Start Button, Landing Page and Correct vs Incorrect
   startButtonEl.setAttribute("style", "display:none");
-  quizEl.setAttribute("style", "visibility:visible");
-  headerEl.setAttribute("style", "display:none");
+  mainEl.setAttribute("style", "display:none");
   correctCheckEl.setAttribute("style", "visibility:hidden");
   incorrectCheckEl.setAttribute("style", "visibility:hidden");
 
+  // Timer - 60 seconds starting time
   var secondsLeft = 60;
 
+  // Timer - Count down by 1 second at a time
   var timerInterval = setInterval(function () {
     secondsLeft--;
     timerEl.textContent = secondsLeft;
 
+    // If user guesses question correct, add 1 point to score, display correct message
+    // If user guesses incorrectly, deduct 1 point to score, display incorrect message, deduct 10 seconds from timer
+    // Display next question after answering
     Quiz.prototype.guess = function (answer) {
       if (this.getQuestionIndex().correctAnswer(answer)) {
         this.score++;
@@ -57,6 +71,7 @@ function startTime() {
       this.questionIndex++;
     };
 
+    // When timer hits 0, sendMessage() function = announce time is up and go to scoreboard
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
       sendMessage();
@@ -64,6 +79,7 @@ function startTime() {
   }, 1000);
 }
 
+// Announce time is up and go to scoreboard function
 function sendMessage() {
   timerEl.textContent = "is up!";
   finalScoreContainer();
@@ -97,6 +113,7 @@ Question.prototype.correctAnswer = function (choice) {
 function populate() {
   if (quiz.isEnded()) {
     finalScoreContainer();
+    document.querySelector(".time").classList.add("hidden");
   } else {
     var element = document.getElementById("question");
     element.innerHTML = quiz.getQuestionIndex().text;
@@ -119,6 +136,7 @@ function guess(id, guess) {
   };
 }
 
+// Quiz Questions
 var questions = [
   new Question(
     "1. Commonly used data types do not include...",
@@ -149,15 +167,25 @@ var questions = [
 
 var quiz = new Quiz(questions);
 
-// View High Score Button
+// Final Score Function
 function finalScoreContainer() {
-  startButtonEl.setAttribute("style", "display:none");
-  quizEl.setAttribute("style", "display:none");
-  headerEl.setAttribute("style", "visibility:visible");
+  // Display Final Score Container
+  mainEl.setAttribute("style", "visibility:visible");
   finalScoreContainerEl.setAttribute("style", "visibility:visible");
-  titleEl.textContent = "High Scores";
+
+  // Hide Quiz
+  startButtonEl.setAttribute("style", "display:none");
+  quizDivEl.setAttribute("style", "display:none");
+
+  titleEl.textContent = "Hall of Fame";
   directionsEl.textContent = "All done!";
-  finalScorePEl.textContent = "Your final score is " + quiz.score + "!";
+
+  if (quiz.score <= 0) {
+    finalScorePEl.textContent = "Oh No! Your final score is 0!";
+  } else {
+    finalScorePEl.textContent = "Nice job! Your final score is " + quiz.score + "!";
+  }
+
 }
 
 // High Score Div
@@ -177,12 +205,12 @@ function renderHighscores() {
     var highscore = highscores[i];
 
     var li = document.createElement("li");
-    li.textContent = highscore + " : " + quiz.score;
+    li.textContent = highscore;
     li.setAttribute("data-index", i);
 
     var button = document.createElement("button");
-    button.textContent = "Clear";
-    button.setAttribute("class", "btn btn-primary");
+    button.textContent = "Delete";
+    button.setAttribute("class", "btn btn-danger");
 
     li.appendChild(button);
     highscoreList.appendChild(li);

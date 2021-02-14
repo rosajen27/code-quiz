@@ -1,37 +1,35 @@
-# Code Quiz
+# ❓ Coding Quiz
 
-A timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+A timed coding quiz with multiple-choice questions. The quiz will inform the user if their answer is correct or incorrect. 10 seconds will be deducted from the timer for every incorrect answers. User will also have the opportunity to enter their name into the Hall of Fame scoreboard once the quiz ends.
+
 
 ## Deployment
 
-Deployed Website: https://rosajen27.github.io/codequiz/
+Demo: https://rosajen27.github.io/codequiz/
 
 ![code quiz](https://github.com/rosajen27/codequiz/blob/master/Assets/Capture.png)
 
+
 ## Built With
 
-  - HTML
-  - CSS
-  - JavaScript
+  * HTML
+  * CSS
+  * JavaScript
   
-  
-## To Do
-- LocalStorage for Final Scores needs to be fixed
-
 
 ## Authors
 
-  - **Jennifer Rosa**
+  * **Jennifer Rosa**
     [Rosajen27](https://rosajen27.github.io/)
 
 
 ## License
 
-![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)
+![License](https://img.shields.io/badge/license*MIT%20License*blue.svg)
 
 This project is licensed under the MIT License.
 
-Copyright (c) 2020 Jennifer Rosa
+Copyright (c) 2021 Jennifer Rosa
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -53,4 +51,4 @@ SOFTWARE.
 
 ## Acknowledgments
 
-  - Trilogy Education Services
+  * Trilogy Education Services
